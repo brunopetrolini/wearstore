@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "774209603031",
+    "firebase_url": "https://lojavirtual-e2c91.firebaseio.com",
+    "project_id": "lojavirtual-e2c91",
+    "storage_bucket": "lojavirtual-e2c91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774209603031:android:1c552448043c3143e63792",
+        "android_client_info": {
+          "package_name": "br.com.petrolini.lojavirtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774209603031-qgalcjuccf1k1of7l28d24cq148v5vel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNsF4lNUrz1_XC7Qmne08K_PZXV5HZUk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774209603031-qgalcjuccf1k1of7l28d24cq148v5vel.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "774209603031-9hlo5voql1bomudmiig5fv01kb4mgk6f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.petrolini.lojavirtual"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
