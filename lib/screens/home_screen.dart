@@ -26,9 +26,6 @@ class HomeScreen extends StatelessWidget {
           drawer: CustomDrawer(_pageController),
           body: CategoryTab(),
         ),
-        Container(color: Colors.white, child: Center(child: Text("Lojas"))),
-        Container(
-            color: Colors.white, child: Center(child: Text("Meus Pedidos"))),
       ],
     );
   }
