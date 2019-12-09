@@ -15,6 +15,10 @@ class CartPrice extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: ScopedModelDescendant<CartModel>(
           builder: (context, child, model) {
+            double price = model.getProductsPrice();
+            double discount = model.getDiscount();
+            double ship = model.getShipPrice();
+
             return Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -30,7 +34,7 @@ class CartPrice extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text("Subtotal"),
-                    Text("R\$ 0.00"),
+                    Text("R\$ ${price.toStringAsFixed(2)}"),
                   ],
                 ),
                 Divider(),
@@ -38,7 +42,11 @@ class CartPrice extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text("Desconto"),
-                    Text("R\$ 0.00"),
+                    Text(
+                      discount <= 0
+                          ? "R\$ ${discount.toStringAsFixed(2)}"
+                          : "R\$ -${discount.toStringAsFixed(2)}",
+                    ),
                   ],
                 ),
                 Divider(),
@@ -46,7 +54,7 @@ class CartPrice extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text("Entrega"),
-                    Text("R\$ 14.00"),
+                    Text("R\$ ${ship.toStringAsFixed(2)}"),
                   ],
                 ),
                 Divider(),
@@ -61,7 +69,7 @@ class CartPrice extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "R\$ 0.00",
+                      "R\$ ${(price - discount + ship).toStringAsFixed(2)}",
                       style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontSize: 16,
