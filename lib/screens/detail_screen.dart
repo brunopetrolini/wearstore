@@ -125,6 +125,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               cartProduct.quantity = 1;
                               cartProduct.pid = product.id;
                               cartProduct.category = product.category;
+                              cartProduct.productData = product;
 
                               CartModel.of(context).addCartItem(cartProduct);
 
